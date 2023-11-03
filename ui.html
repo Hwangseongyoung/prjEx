@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul, ol {
+      list-style: none;
+    }
+    .wrap {
+      width: 1200px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .wrap>div {
+      width: 400px;
+    }
+
+    ul {
+      display: flex;
+    }
+
+    li{
+      width: 250px;
+      margin-right: 10px;
+    }
+    li:last-child{
+      margin-right: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="wrap">
+    <div>
+      <h3 class="title">개비리길</h3>
+      <p class="text">아름다운풍경을 어쩌구저쩌구</p>
+    </div>
+    <ul>
+      <li><img class="img1" src="./images/1-1.jpg" alt="이미지1"/></li>
+      <li><img class="img2" src="./images/2-1.jpg" alt="이미지2"/></li>
+      <li><img class="img3" src="./images/3-1.jpg" alt="이미지3"/></li>
+    </ul>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script>
+    function changeTitle1(e){
+      e.preventDefault();
+      let tt = "이미지1입니다~";
+      let text = "이미지1 설명입니다~~"
+      document.querySelector(".title").innerHTML = tt;
+      document.querySelector(".text").innerHTML = text;
+    }
+    document.querySelector(".img1").addEventListener('mouseover', changeTitle1);
+
+    function changeTitle2(e){
+      e.preventDefault();
+      let tt = "이미지2입니다~";
+      let text = "이미지2 설명입니다~~"
+      document.querySelector(".title").innerHTML = tt;
+      document.querySelector(".text").innerHTML = text;
+    }
+    document.querySelector(".img2").addEventListener('mouseover', changeTitle2);
+
+    function changeTitle3(e){
+      e.preventDefault();
+      let tt = "이미지3입니다~";
+      let text = "이미지3 설명입니다~~"
+      document.querySelector(".title").innerHTML = tt;
+      document.querySelector(".text").innerHTML = text;
+    }
+    document.querySelector(".img3").addEventListener('mouseover', changeTitle3);
+  </script>
+</body>
+</html>
